@@ -29,4 +29,4 @@ export function monday(value) {
   date.setUTCDate(date.getUTCDate()-(date.getUTCDay()+6)%7); return date;
 }
 export function dateLabel(value) { const date=new Date(`${value}T12:00:00Z`); return Number.isNaN(date.getTime())?'':date.toLocaleDateString('fr-FR',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}); }
-export function csvCell(value) { let s=String(value??''); if(/^[=+@\-\t\r]/.test(s)) s="'"+s; return '"'+s.replaceAll('"','""')+'"'; }
+export function csvCell(value) { let s=String(value??''); if(/^\s*[=+@\-]/.test(s)||/^[\t\r]/.test(s)) s="'"+s; return '"'+s.replaceAll('"','""')+'"'; }
