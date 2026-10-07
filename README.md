@@ -14,6 +14,8 @@ Cloudflare Pages : commande `npm run build`, sortie `dist`, branche de productio
 
 `config.json` fixe l’URL canonique, la date de publication et les informations d’édition. Après un changement de domaine, adapter `origin`, reconstruire, rediriger l’ancien domaine et mettre à jour Search Console. Ne pas changer d’URL simplement pour tester.
 
+Validation du lancement : quatre tests du noyau et des essais DOM des six formulaires passent. Le premier déploiement manuel depuis la branche Git réussit et Cloudflare confirme `uses_functions=false`. Un essai dans le navigateur publié confirme le calcul périscolaire de 2 h 30. Le déclenchement automatique après mise à jour Git reste à confirmer : la configuration est activée, mais aucun déploiement de type `github:push` n’a encore été observé. Vérifier l’accès de l’application Cloudflare Workers and Pages au dépôt `git_playground` dans les installations GitHub. Les tests DOM ne remplacent pas un essai sur une imprimante ou un iPhone réel.
+
 ## Pourquoi ce créneau
 
 Le pari est un ensemble cohérent de documents d’organisation, plutôt qu’un annuaire de centaines d’outils génériques. Les besoins de planning, présence et transmissions sont récurrents. Le visiteur obtient immédiatement un document personnalisé, pas seulement un article. La version mobile, les deux créneaux de présence pour le périscolaire, les dates réelles, les coupons multiples et l’export CSV constituent des fonctions utiles et vérifiables.
